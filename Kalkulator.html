@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fontawesome-free-6.2.0-web/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<title>Kalkulator Iphone</title>
+</head>
+<body>
+
+	<div class="kotak">
+
+		<div class="LCD">
+
+			<p style="color: white; text-align: right; font-size: 40px;" id="tempat">0</p>
+
+		</div>
+		
+		<button id="ac" class="button2" onclick="hapus()">AC</button>
+		<button class="button2" onclick="#"><small>+/-</small></i></button>
+		<button class="button2" onclick="nilai('%')"><i class="fa-light fa-percent"></i></button>
+		<button class="button" style="color: white; background-color: #f79502;" onclick="nilai('/')"><i class="fa-solid fa-divide"></i></button>
+		<button class="button1" onclick="nilai('7')">7</button>
+		<button class="button1" onclick="nilai('8')">8</button>
+		<button class="button1" onclick="nilai('9')">9</button>
+		<button class="button" style="color: white; background-color: #f79502;" onclick="nilai('*')">x</button>
+		<button class="button1" onclick="nilai('4')">4</button>
+		<button class="button1" onclick="nilai('5')">5</button>
+		<button class="button1" onclick="nilai('6')">6</button>
+		<button class="button" style="color: white; background-color: #f79502;" onclick="nilai('-')"><i class="fa-sharp fa-solid fa-minus"></i></button>
+		<button class="button1" onclick="nilai('1')">1</button>
+		<button class="button1" onclick="nilai('2')">2</button>
+		<button class="button1" onclick="nilai('3')">3</button>
+		<button class="button" style="color: white; background-color: #f79502;" onclick="nilai('+')"><i class="fa-sharp fa-solid fa-plus"></i></button>
+		<button class="button1" style="border-radius: 50px; width: 130px; height: 60px;" onclick="nilai('0')">0</button>
+		<button class="button1" onclick="nilai('.')">,</button>
+		<button class="button" style="color: white; background-color: #f79502;" onclick="hasil()">=</button>
+
+
+
+	</div>
+	<script>
+
+	var status = 0;
+	const tampilan = document.getElementById("tempat");
+
+	function nilai(isi) {
+		if (status == 0) {
+			tampilan.innerHTML =  isi;
+			document.getElementById("ac").innerHTML =  "C";
+
+			status = 1;
+		} else {
+			tampilan.innerHTML = tampilan.innerHTML + isi;
+		}
+	}
+
+	function hapus() {
+		tampilan.innerHTML = "0";
+		document.getElementById("ac").innerHTML =  "AC";
+		status = 0;
+	}
+
+	function hasil() {
+		var h = tampilan.innerHTML;
+			tampilan.innerHTML = eval(h);
+	}
+
+	</script>
+	<script>type="text/javascript" src="bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js"</script>
+</body>
+</html>

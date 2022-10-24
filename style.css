@@ -1,0 +1,57 @@
+
+.kotak {
+
+	width: 280px;
+	height: 550px;
+	border: 1px solid;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 70px;
+	background-color: black;
+	border-radius: 20px;
+}
+.LCD {
+		width: 240px;
+		height: 80px;
+		margin-left: auto;
+		margin-right: auto;
+		border: 1px solid;
+		margin-top: 100px;
+		margin-bottom: 15px;
+		}
+.button {
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+button.button1 {
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	margin-left: 5px;
+	margin-top: 5px;
+	color: white;
+	background-color: #2e2e2e;
+	/*transition: background-color 1s;*/
+}
+
+ button.button1:active {
+	background-color: #78787c;
+	/*transition: background-color 1s;*/
+}
+
+button.button2 {
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	margin-left: 5px;
+	margin-top: 5px;
+	color: black; 
+	background-color: #a8a8a9;
+}
+
+button.button2:active {
+	background-color: #d9d8db;
+}
